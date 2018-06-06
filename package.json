@@ -1,0 +1,17 @@
+{
+  "name": "dom-parser",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/YouHan26/dom-parser.git",
+  "author": "YouHan26 <youhan26@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src --presets es2015 --plugins transform-object-rest-spread --out-dir dist",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
