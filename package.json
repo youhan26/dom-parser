@@ -1,10 +1,9 @@
 {
-  "name": "dom-parser",
+  "name": "react-native-dom-parser",
   "version": "1.0.0",
   "main": "src/index.js",
   "repository": "https://github.com/YouHan26/dom-parser.git",
   "author": "YouHan26 <youhan26@gmail.com>",
-  "license": "MIT",
   "scripts": {
     "build": "babel src --presets es2015 --plugins transform-object-rest-spread --out-dir dist",
     "prepublish": "npm run build"

@@ -101,4 +101,6 @@ $RECYCLE.BIN/
 *.lnk
 
 node_modules/
+dist/
+.idea/
 
