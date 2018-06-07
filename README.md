@@ -69,7 +69,9 @@ TextNode:
   ElementNode.getElementsByName(name)
 ```
 
-
+### TODO
+* [ ] querySelector 
+* [ ] querySelectorAll
 
 
 
