@@ -70,6 +70,7 @@ TextNode:
 ```
 
 ### TODO
+* [ ] Set up auto-test
 * [ ] querySelector 
 * [ ] querySelectorAll
 
