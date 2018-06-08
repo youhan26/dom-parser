@@ -10,7 +10,7 @@ function convertAttributes(str) {
     return {};
   }
   const result = {};
-  const arr = str.replace(/[\s]+/g, ' ').trim().match(/([\S]+="[^=]*")|([^\s"]+)/g);
+  const arr = str.replace(/[\s]+/g, ' ').trim().match(/([\S]+="[^"]*")|([^\s"]+)/g);
   
   arr.forEach((item) => {
     const match = item.split('=');
