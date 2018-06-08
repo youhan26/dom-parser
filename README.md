@@ -20,6 +20,11 @@ rootNode.getElementById('myCarousel');
 rootNode.getElementsByClassName('item');
 rootNode.getElementsByTagName('div');
 
+rootNode.children
+rootNode.children[0].getElementsByName('name')
+
+rootNode.style
+rootNode.classList
 ```
 
 ## Support
