@@ -15,6 +15,11 @@ npm install --save react-native-dom-parser
 import DomSelector from 'react-native-dom-parser';
 
 const rootNode = DomSelector(rowHtmlData);
+
+rootNode.getElementById('myCarousel');
+rootNode.getElementsByClassName('item');
+rootNode.getElementsByTagName('div');
+
 ```
 
 ## Support
