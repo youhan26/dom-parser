@@ -162,6 +162,9 @@ function parseChildren(str) {
           throw new Error('parse error');
         } else {
           if (node.tagName === currentNode.tagName) {
+            currentNode.firstChild = currentNode.children[0];
+            currentNode.lastChild = currentNode.children[currentNode.children.length - 1];
+
             currentNode = currentNode.parent;
           } else {
             throw new Error('parse error');

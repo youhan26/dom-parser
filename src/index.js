@@ -86,7 +86,7 @@ function addLine(line, isTextNode) {
     });
     return;
   }
-  
+
   let match;
   // "<image />"
   match = line.match(/<([^\s<>]+) ?([^<>]*)\/>/);
@@ -156,6 +156,9 @@ function parseChildren(str) {
           throw new Error('parse error');
         } else {
           if (node.tagName === currentNode.tagName) {
+            currentNode.firstChild = currentNode.children[0];
+            currentNode.lastChild = currentNode.children[currentNode.children.length - 1];
+
             currentNode = currentNode.parent;
           } else {
             throw new Error('parse error');
@@ -189,7 +192,7 @@ function parseChildren(str) {
 const DomSelector = function (str) {
   let _str = str || '';
   _str = correctBracket(getBodyIfHave(removeBreakLine(removeComment(_str))));
-  
+
   const result = parseChildren(_str);
   if (result.length > 1) {
     const root = new ElementNode({tagName: '', attributes: '', text: str}, null);
