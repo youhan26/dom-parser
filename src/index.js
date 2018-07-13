@@ -6,6 +6,9 @@
 import ElementNode from "./ElementNode";
 import TextNode from "./TextNode";
 
+function removeScript(str){
+  return str.replace(/<script[^>]*>([^]*?)<\/script>/g, '');
+}
 
 function correctBracket(str) {
   return str.replace(/("[^<>\/"]*)<([^<>\/"]+)>([^<>\/"]*")/g, '"$1|$2|$3"');
@@ -191,7 +194,7 @@ function parseChildren(str) {
  */
 const DomSelector = function (str) {
   let _str = str || '';
-  _str = correctBracket(getBodyIfHave(removeBreakLine(removeComment(_str))));
+  _str = correctBracket(getBodyIfHave(removeBreakLine(removeComment(removeScript(_str)))));
 
   const result = parseChildren(_str);
   if (result.length > 1) {
